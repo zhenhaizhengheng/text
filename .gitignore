@@ -23,3 +23,14 @@ dist-ssr
 *.sln
 *.sw?
 .vite
+
+# pnpm
+.pnpm-store
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Build artifacts
+*.tgz
