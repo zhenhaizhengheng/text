@@ -1,8 +1,9 @@
 {
-  "name": "workspace",
+  "name": "duoyuzhong",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "description": "多语种学习平台 - 沉浸式宇宙探索主题的在线教育平台",
   "scripts": {
     "client:dev": "vite",
     "build": "tsc -b && vite build",
