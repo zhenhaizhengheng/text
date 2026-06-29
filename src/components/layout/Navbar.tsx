@@ -15,8 +15,8 @@ import {
 } from 'lucide-react';
 import { useAuthStore } from '@/store/useAuthStore';
 import { useUIStore } from '@/store/useUIStore';
-import Avatar from '@/components/common/Avatar';
-import Button from '@/components/common/Button';
+import { Avatar } from '@/components/common/Avatar';
+import { Button } from '@/components/common/Button';
 import { currentUser } from '@/data/user';
 
 const Navbar = () => {
