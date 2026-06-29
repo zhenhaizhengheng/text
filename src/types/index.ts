@@ -194,4 +194,69 @@ export interface SpeakingSentence {
   translation: string;
   phonetic?: string;
   difficulty: number;
+  audioUrl?: string;
+  category?: string;
+}
+
+export interface ListeningCategory {
+  id: string;
+  name: string;
+  icon: string;
+  color: string;
+  description: string;
+  count: number;
+}
+
+export interface ListeningItem {
+  id: string;
+  title: string;
+  category: string;
+  level: 'beginner' | 'intermediate' | 'advanced';
+  duration: number;
+  audioUrl: string;
+  transcript: string;
+  translation: string;
+  questions: ListeningQuestion[];
+  coverImage?: string;
+}
+
+export interface ListeningQuestion {
+  id: string;
+  question: string;
+  options: string[];
+  correctAnswer: number;
+  explanation: string;
+}
+
+export interface SpeakingCategory {
+  id: string;
+  name: string;
+  icon: string;
+  color: string;
+  description: string;
+  count: number;
+}
+
+export interface SpeakingLesson {
+  id: string;
+  title: string;
+  category: string;
+  level: 'beginner' | 'intermediate' | 'advanced';
+  sentences: SpeakingSentence[];
+  coverImage?: string;
+}
+
+export interface RecordingState {
+  isRecording: boolean;
+  duration: number;
+  audioUrl: string | null;
+  isPlaying: boolean;
+}
+
+export interface ScoreFeedback {
+  overall: number;
+  pronunciation: number;
+  fluency: number;
+  completeness: number;
+  tips: string[];
 }
