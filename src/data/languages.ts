@@ -2,6 +2,15 @@ import type { Language } from '../types';
 
 export const languages: Language[] = [
   {
+    id: 'lang-zh',
+    name: '中文',
+    nameEn: 'Chinese',
+    flag: '🇨🇳',
+    color: '#EF4444',
+    learnersCount: 500000,
+    description: '世界上使用人数最多的语言，中华文化的载体',
+  },
+  {
     id: 'lang-en',
     name: '英语',
     nameEn: 'English',

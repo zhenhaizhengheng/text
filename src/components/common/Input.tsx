@@ -6,6 +6,8 @@ export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> 
   error?: string
   icon?: React.ReactNode
   iconPosition?: 'left' | 'right'
+  rightIcon?: React.ReactNode
+  onRightIconClick?: () => void
   description?: string
 }
 
@@ -17,6 +19,8 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
       error,
       icon,
       iconPosition = 'left',
+      rightIcon,
+      onRightIconClick,
       description,
       id,
       ...props
@@ -47,7 +51,8 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
             className={cn(
               'w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-purple-500/50 focus:ring-2 focus:ring-purple-500/20 transition-all duration-200',
               icon && iconPosition === 'left' && 'pl-10',
-              icon && iconPosition === 'right' && 'pr-10',
+              (icon && iconPosition === 'right') && 'pr-10',
+              rightIcon && 'pr-10',
               error &&
                 'border-red-500/50 focus:border-red-500/50 focus:ring-red-500/20'
             )}
@@ -57,6 +62,15 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
             <div className="absolute right-3 top-1/2 -translate-y-1/2 text-white/40">
               {icon}
             </div>
+          )}
+          {rightIcon && (
+            <button
+              type="button"
+              onClick={onRightIconClick}
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-white/40 hover:text-white/60 transition-colors"
+            >
+              {rightIcon}
+            </button>
           )}
         </div>
         {description && !error && (

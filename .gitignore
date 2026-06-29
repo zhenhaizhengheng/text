@@ -34,3 +34,11 @@ dist-ssr
 
 # Build artifacts
 *.tgz
+
+# Server
+server/node_modules
+server/dist
+server/*.sqlite
+server/*.sqlite-shm
+server/*.sqlite-wal
+server/.env
