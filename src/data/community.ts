@@ -1,4 +1,4 @@
-import type { Post, User } from '../types';
+import type { Post, User, Topic, Comment } from '../types';
 
 const users: User[] = [
   {
@@ -224,6 +224,156 @@ export const posts: Post[] = [
     commentsCount: 67,
     isLiked: true,
     createdAt: '2025-06-25 18:45:00',
+  },
+];
+
+export const topics: Topic[] = [
+  {
+    id: 'topic-1',
+    name: '英语学习打卡',
+    description: '每天打卡记录英语学习进度，和小伙伴一起坚持！',
+    icon: '📚',
+    postsCount: 1256,
+    color: 'from-blue-500 to-cyan-500',
+  },
+  {
+    id: 'topic-2',
+    name: '日语爱好者',
+    description: '分享日语学习心得，一起看动漫、练口语。',
+    icon: '🎌',
+    postsCount: 892,
+    color: 'from-rose-500 to-pink-500',
+  },
+  {
+    id: 'topic-3',
+    name: '韩语学习',
+    description: 'KPOP、韩剧爱好者聚集地，一起学韩语吧！',
+    icon: '💜',
+    postsCount: 756,
+    color: 'from-purple-500 to-fuchsia-500',
+  },
+  {
+    id: 'topic-4',
+    name: '法语浪漫',
+    description: '感受法语的浪漫与优雅，分享学习经验。',
+    icon: '🗼',
+    postsCount: 423,
+    color: 'from-indigo-500 to-blue-500',
+  },
+  {
+    id: 'topic-5',
+    name: '西语热情',
+    description: '学习热情似火的西班牙语，探索拉美文化。',
+    icon: '🌮',
+    postsCount: 367,
+    color: 'from-orange-500 to-red-500',
+  },
+  {
+    id: 'topic-6',
+    name: '学习方法讨论',
+    description: '分享高效学习方法，交流学习技巧。',
+    icon: '💡',
+    postsCount: 534,
+    color: 'from-amber-500 to-yellow-500',
+  },
+  {
+    id: 'topic-7',
+    name: '考试备考',
+    description: '雅思、托福、JLPT、TOPIK等考试备考交流。',
+    icon: '📝',
+    postsCount: 678,
+    color: 'from-emerald-500 to-teal-500',
+  },
+  {
+    id: 'topic-8',
+    name: '语言交换',
+    description: '找语伴，互相学习，共同进步。',
+    icon: '🤝',
+    postsCount: 289,
+    color: 'from-pink-500 to-rose-500',
+  },
+];
+
+export const comments: Comment[] = [
+  {
+    id: 'comment-1',
+    postId: 'post-1',
+    userId: 'user-2',
+    user: users[1],
+    content: '太厉害了！45天坚持下来真的不容易，向你学习！',
+    createdAt: '2025-06-28 08:45:00',
+  },
+  {
+    id: 'comment-2',
+    postId: 'post-1',
+    userId: 'user-3',
+    user: users[2],
+    content: '加油加油！我也在努力坚持打卡中～',
+    createdAt: '2025-06-28 09:00:00',
+  },
+  {
+    id: 'comment-3',
+    postId: 'post-1',
+    userId: 'user-4',
+    user: users[3],
+    content: '商务英语难度怎么样？我也想试试',
+    createdAt: '2025-06-28 09:30:00',
+  },
+  {
+    id: 'comment-4',
+    postId: 'post-2',
+    userId: 'user-1',
+    user: users[0],
+    content: '影子跟读法真的很有效！我也一直在用',
+    createdAt: '2025-06-28 09:30:00',
+  },
+  {
+    id: 'comment-5',
+    postId: 'post-2',
+    userId: 'user-5',
+    user: users[4],
+    content: '请问什么是影子跟读法呀？能详细说说吗',
+    createdAt: '2025-06-28 10:00:00',
+  },
+  {
+    id: 'comment-6',
+    postId: 'post-4',
+    userId: 'user-1',
+    user: users[0],
+    content: '小舌音确实很难，我当时练了好久。可以试试漱口的时候仰头咕噜咕噜，找那个震动的感觉',
+    createdAt: '2025-06-28 11:45:00',
+  },
+  {
+    id: 'comment-7',
+    postId: 'post-4',
+    userId: 'user-2',
+    user: users[1],
+    content: '虽然我学的是日语，但法语发音听起来好浪漫啊',
+    createdAt: '2025-06-28 12:00:00',
+  },
+  {
+    id: 'comment-8',
+    postId: 'post-9',
+    userId: 'user-1',
+    user: users[0],
+    content: '太厉害了！一年半就到B2，请问有什么学习秘诀吗？',
+    createdAt: '2025-06-26 15:30:00',
+  },
+  {
+    id: 'comment-9',
+    postId: 'post-9',
+    userId: 'user-3',
+    user: users[2],
+    content: '恭喜恭喜！希望我学韩语也能这么厉害',
+    createdAt: '2025-06-26 16:00:00',
+  },
+  {
+    id: 'comment-10',
+    postId: 'post-10',
+    userId: 'user-4',
+    user: users[3],
+    content: '大舌音我也练了很久！可以先发"得啦得啦"，慢慢找感觉',
+    createdAt: '2025-06-26 17:00:00',
   },
 ];
 
